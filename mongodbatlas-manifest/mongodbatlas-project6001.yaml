@@ -1,0 +1,10 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasProject
+metadata:
+  name: project6001
+  namespace: mongodb-atlas-system
+spec:
+  name: project6001 
+  projectIpAccessList:
+    - ipAddress: "0.0.0.0/0"
+      comment: "Allow everything to connect at this time"
