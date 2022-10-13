@@ -1,0 +1,38 @@
+apiVersion: atlas.mongodb.com/v1
+kind: AtlasDeployment
+metadata:
+  name: test-cluster-project6001
+  namespace: mongodb-atlas-system
+spec:
+  projectRef:
+    name: project6001
+  deploymentSpec:
+    autoScaling:
+      compute:
+        enabled: true
+        scaleDownEnabled: true
+    clusterType: REPLICASET
+    name: prj6001-cluster002
+    providerBackupEnabled: true
+    paused: false
+    providerSettings:
+      autoScaling:
+        compute:
+          maxInstanceSize: M20
+          minInstanceSize: M10
+      instanceSizeName: M10
+      providerName: GCP
+    replicationSpecs:
+      - numShards: 1
+        regionsConfig:
+          CENTRAL_US:
+            analyticsNodes: 0
+            electableNodes: 1
+            priority: 6
+            readOnlyNodes: 0
+          US_EAST_4:
+            analyticsNodes: 0
+            electableNodes: 2
+            priority: 7
+            readOnlyNodes: 0
+        zoneName: Zone 1
