@@ -14,7 +14,7 @@ spec:
     clusterType: REPLICASET
     name: prj6001-cluster002
     providerBackupEnabled: true
-    paused: true
+    paused: false
     providerSettings:
       autoScaling:
         compute:
