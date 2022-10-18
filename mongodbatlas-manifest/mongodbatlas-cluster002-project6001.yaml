@@ -3,6 +3,8 @@ kind: AtlasDeployment
 metadata:
   name: test-cluster-project6001
   namespace: mongodb-atlas-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   projectRef:
     name: project6001

@@ -3,6 +3,8 @@ kind: AtlasProject
 metadata:
   name: project6001
   namespace: mongodb-atlas-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   name: project6001 
   projectIpAccessList:
