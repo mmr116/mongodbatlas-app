@@ -1,27 +1,23 @@
 apiVersion: atlas.mongodb.com/v1
 kind: AtlasDeployment
 metadata:
-  name: test-cluster-project6001
+  name: project-balabit-cluster01
   namespace: mongodb-atlas-system
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   projectRef:
-    name: project6001
+    name: project-balabit
   deploymentSpec:
     autoScaling:
       compute:
         enabled: true
         scaleDownEnabled: true
     clusterType: REPLICASET
-    name: prj6001-cluster002
+    name: prjbalabit-cluster01
     providerBackupEnabled: true
     paused: true
     providerSettings:
-      autoScaling:
-        compute:
-          maxInstanceSize: M20
-          minInstanceSize: M10
       instanceSizeName: M10
       providerName: GCP
     replicationSpecs:
